@@ -2,7 +2,7 @@ import { Certificate } from './models/certificate.model';
 import { CrewMember } from './models/crewMember.model';
 
 
-const certificates: Certificate[] = [
+export const certificates: Certificate[] = [
   new Certificate(1, 'Safety Training', new Date('2022-01-01'), new Date('2025-01-01')),
   new Certificate(2, 'Medical Certification', new Date('2023-06-15'), new Date('2026-06-15')),
   new Certificate(3, 'Firefighting Training', new Date('2021-09-10'), new Date('2024-09-10')),
