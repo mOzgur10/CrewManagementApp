@@ -12,9 +12,9 @@ export const certificates: Certificate[] = [
 
 
 export const crewMembers: CrewMember[] = [
-  new CrewMember(1,'Jack', 'Sparrow', 'American', 'Captain', 180, 300, 'USD', [certificates[0], certificates[1]]),
+  new CrewMember(1,'Jack', 'Sparrow', 'American', 'Captain', 180, 300, 'USD', [certificates[0], certificates[1],certificates[4]]),
   new CrewMember(2,'Oscar', 'Wilde', 'Irish', 'Engineer', 150, 250, 'USD', [certificates[2], certificates[3]]),
   new CrewMember(3,'Carlos', 'Garcia', 'Spanish', 'Cooker', 200, 200, 'EUR', [certificates[4], certificates[1]]),
   new CrewMember(4,'Edoardo', 'Bianchi', 'Italian', 'Mechanicer', 220, 280, 'EUR', [certificates[2], certificates[1]]),
-  new CrewMember(5,'Sophie', 'Dubois', 'French', 'Navigator', 170, 320, 'USD', [certificates[4], certificates[2]])
+  new CrewMember(5,'Sophie', 'Dubois', 'French', 'Navigator', 170, 320, 'USD', [certificates[4]])
 ];
