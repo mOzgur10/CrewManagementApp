@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CrewListComponent } from './components/crew-list/crew-list.component'; 
-import { CrewCardPageComponent } from './components/crew-card-page/crew-card-page.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core'
+import { HeaderComponent } from './components/header/header.component';
 
 
 
@@ -9,10 +9,10 @@ import { CrewCardPageComponent } from './components/crew-card-page/crew-card-pag
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CrewListComponent,CrewCardPageComponent],
+  imports: [RouterOutlet,TranslateModule,HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  
+
 }

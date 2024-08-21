@@ -1,0 +1,16 @@
+.header {
+    background-color: #e3f2fd; /* Açık mavi arka plan rengi */
+    padding: 10px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  button {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  } 

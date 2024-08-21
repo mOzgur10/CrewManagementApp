@@ -1,49 +1,49 @@
 <div class="dialog-content-wrapper" style="padding: 1%;">
-    <form [formGroup]="crewForm" (ngSubmit)="onSubmit()" class="example-form">
-      <mat-form-field class="example-full-width">
-        <input matInput type="number" placeholder="ID" formControlName="id">
-      </mat-form-field>
-  
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="First Name" formControlName="firstName">
-      </mat-form-field>
-  
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Surname" formControlName="lastName">
-      </mat-form-field>
-  
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Nationality" formControlName="nationality">
-      </mat-form-field>
-  
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Title" formControlName="title">
-      </mat-form-field>
-      
-      <mat-form-field class="example-full-width">
-        <input matInput type="number" placeholder="Days On Board" formControlName="daysOnBoard">
-      </mat-form-field>
-  
-      <mat-form-field class="example-full-width">
-        <input matInput type="number" placeholder="Daily Rate" formControlName="dailyRate">
-      </mat-form-field>
-      
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Currency" formControlName="currency">
-      </mat-form-field>
-      
-      <mat-form-field class="example-full-width">
-        <mat-label>Certificate</mat-label>
-        <mat-select formControlName="certificates" multiple>
-          <mat-option *ngFor="let certificate of certificates" [value]="certificate">
-            {{ certificate.name }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-  
-      <div>
-        <button mat-raised-button type="button" (click)="dialogRef.close()">Cancel</button>
-        <button mat-raised-button color="primary" type="submit">Submit</button>
-      </div>
-    </form>
-  </div>
+  <form [formGroup]="crewForm" (ngSubmit)="onSubmit()" class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput type="number" placeholder="{{ 'ID' | translate }}" formControlName="id">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'FIRST_NAME' | translate }}" formControlName="firstName">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'LAST_NAME' | translate }}" formControlName="lastName">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'NATIONALITY' | translate }}" formControlName="nationality">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'TITLE' | translate }}" formControlName="title">
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+      <input matInput type="number" placeholder="{{ 'DAYS_ON_BOARD' | translate }}" formControlName="daysOnBoard">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="number" placeholder="{{ 'DAILY_RATE' | translate }}" formControlName="dailyRate">
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'CURRENCY' | translate }}" formControlName="currency">
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>{{ 'CERTIFICATE' | translate }}</mat-label>
+      <mat-select formControlName="certificates" multiple>
+        <mat-option *ngFor="let certificate of certificates" [value]="certificate">
+          {{ certificate.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div>
+      <button mat-raised-button type="button" (click)="dialogRef.close()">{{ 'CANCEL' | translate }}</button>
+      <button mat-raised-button color="primary" type="submit">{{ 'SUBMIT' | translate }}</button>
+    </div>
+  </form>
+</div>

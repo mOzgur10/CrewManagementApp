@@ -1,79 +1,72 @@
-
-
-<h2>Crew Members</h2>
+<h4>{{ 'CREW_MEMBERS' | translate }}</h4>
 <div style="padding: 3%;">
 
   <table mat-table [dataSource]="crewMembers" class="mat-elevation-z8" #myTable>
 
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <th mat-header-cell *matHeaderCellDef> {{ 'ID' | translate }} </th>
       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
     <ng-container matColumnDef="firstName">
-      <th mat-header-cell *matHeaderCellDef> First Name </th>
+      <th mat-header-cell *matHeaderCellDef> {{ 'FIRST_NAME' | translate }} </th>
       <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
     </ng-container>
 
     <ng-container matColumnDef="lastName">
-      <th mat-header-cell *matHeaderCellDef> Last Name </th>
+      <th mat-header-cell *matHeaderCellDef> {{ 'LAST_NAME' | translate }} </th>
       <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
     </ng-container>
 
     <ng-container matColumnDef="nationality">
-      <th mat-header-cell *matHeaderCellDef> Nationality </th>
+      <th mat-header-cell *matHeaderCellDef> {{ 'NATIONALITY' | translate }} </th>
       <td mat-cell *matCellDef="let element"> {{element.nationality}} </td>
     </ng-container>
 
     <ng-container matColumnDef="title">
-      <th mat-header-cell *matHeaderCellDef> Title </th>
+      <th mat-header-cell *matHeaderCellDef> {{ 'TITLE' | translate }} </th>
       <td mat-cell *matCellDef="let element"> {{element.title}} </td>
     </ng-container>
 
     <ng-container matColumnDef="daysOnBoard">
-      <th mat-header-cell *matHeaderCellDef> Days On Board </th>
+      <th mat-header-cell *matHeaderCellDef> {{ 'DAYS_ON_BOARD' | translate }} </th>
       <td mat-cell *matCellDef="let element"> {{element.daysOnBoard}} </td>
     </ng-container>
 
     <ng-container matColumnDef="dailyRate">
-      <th mat-header-cell *matHeaderCellDef> Daily Rate </th>
+      <th mat-header-cell *matHeaderCellDef> {{ 'DAILY_RATE' | translate }} </th>
       <td mat-cell *matCellDef="let element"> {{element.dailyRate}} </td>
     </ng-container>
 
     <ng-container matColumnDef="currency">
-      <th mat-header-cell *matHeaderCellDef> Currency </th>
+      <th mat-header-cell *matHeaderCellDef> {{ 'CURRENCY' | translate }} </th>
       <td mat-cell *matCellDef="let element"> {{element.currency}} </td>
     </ng-container>
 
     <ng-container matColumnDef="edit">
-      <th mat-header-cell *matHeaderCellDef> Edit </th>
+      <th mat-header-cell *matHeaderCellDef>  {{ 'CERTIFICATES' | translate }} </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-button (click)="onEdit(element)" >Show Certificates</button>
+        <button mat-button (click)="onEdit(element)">{{ 'SHOW_CERTIFICATES' | translate }}</button>
       </td>
     </ng-container>
 
     <ng-container matColumnDef="details">
-      <th mat-header-cell *matHeaderCellDef> Details </th>
+      <th mat-header-cell *matHeaderCellDef> {{ 'DETAILS' | translate }} </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-button (click)="viewDetails(element.id)" >Details</button>
+        <button mat-button (click)="viewDetails(element.id)">{{ 'DETAILS' | translate }}</button>
       </td>
     </ng-container>
 
     <ng-container matColumnDef="delete">
-      <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <th mat-header-cell *matHeaderCellDef> {{ 'DELETE' | translate }} </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-button (click)="onDelete(element.id)" >Delete</button>
+        <button mat-button (click)="onDelete(element.id)">{{ 'DELETE' | translate }}</button>
       </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns" ></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 
- <button mat-raised-button (click)="onCreate()" style="margin-top: 16px;">Add Crew Member</button>
+  <button mat-raised-button (click)="onCreate()" style="margin-top: 16px;">{{ 'ADD_CREW_MEMBER' | translate }}</button>
 </div>
-
-
-
-
-

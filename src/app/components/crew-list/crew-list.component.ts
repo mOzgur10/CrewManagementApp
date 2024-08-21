@@ -12,7 +12,7 @@ import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dial
 import { MatTable } from '@angular/material/table';
 import { DialogConfig } from '@angular/cdk/dialog';
 import { CreateFormViewComponent } from '../crew-create-form/view/create-form-view/create-form-view.component';
-import { CrewCardPageComponent } from '../crew-card-page/crew-card-page.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -22,7 +22,7 @@ import { CrewCardPageComponent } from '../crew-card-page/crew-card-page.componen
 @Component({
   selector: 'app-crew-list',
   standalone: true,
-  imports: [MatTableModule,MatButtonModule,RouterOutlet],
+  imports: [MatTableModule,MatButtonModule,RouterOutlet,TranslateModule],
   templateUrl: './crew-list.component.html',
   styleUrl: './crew-list.component.css'
 })

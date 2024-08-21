@@ -4,10 +4,11 @@ import { CrewMemberService } from '../../services/crew-member.service';
 import { CrewMember } from '../../models/crewMember.model';
 import { Certificate } from '../../models/certificate.model'; 
 import { MatCardModule } from '@angular/material/card';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-crew-card-page',
   standalone: true,
-  imports: [MatCardModule],
+  imports: [MatCardModule,TranslateModule],
   templateUrl: './crew-card-page.component.html',
   styleUrl: './crew-card-page.component.css'
 })

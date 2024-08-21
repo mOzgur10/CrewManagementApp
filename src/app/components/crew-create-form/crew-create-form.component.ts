@@ -13,11 +13,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
 import { CrewMember } from '../../models/crewMember.model';
 import {MatButtonModule} from '@angular/material/button';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-crew-create-form',
   standalone: true,
-  imports: [MatInputModule,MatFormFieldModule,ReactiveFormsModule,MatOptionModule,MatSelectModule,CommonModule,MatButtonModule],
+  imports: [TranslateModule,MatInputModule,MatFormFieldModule,ReactiveFormsModule,MatOptionModule,MatSelectModule,CommonModule,MatButtonModule],
   templateUrl: './crew-create-form.component.html',
   styleUrl: './crew-create-form.component.css'
 })
