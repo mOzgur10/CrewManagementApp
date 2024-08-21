@@ -1,0 +1,27 @@
+
+
+  <table mat-table [dataSource]="certificates" class="mat-elevation-z8" style="padding: 2.5%;">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let certificate"> {{certificate.id}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Certificate Name </th>
+      <td mat-cell *matCellDef="let certificate"> {{certificate.name}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="issueDate">
+      <th mat-header-cell *matHeaderCellDef> Valid From </th>
+      <td mat-cell *matCellDef="let certificate"> {{certificate.issueDate}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="expiryDate">
+      <th mat-header-cell *matHeaderCellDef> Valid To </th>
+      <td mat-cell *matCellDef="let certificate"> {{certificate.expiryDate}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

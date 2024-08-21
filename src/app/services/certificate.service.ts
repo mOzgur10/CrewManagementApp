@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Certificate } from '../models/certificate.model';
-import { certificates } from '../app.datasource';
+import { certificates} from '../app.datasource';
 import { CrewMember } from '../models/crewMember.model';
 
 @Injectable({
@@ -8,15 +8,13 @@ import { CrewMember } from '../models/crewMember.model';
 })
 export class CertificateService {
 
+  
+
   constructor() { }
-  certificates: Certificate[] = [];
+  
   
   getCertificates(): Certificate[]{
     return certificates;
   }
-
-  
-
-  
 
 }

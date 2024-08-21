@@ -1,0 +1,29 @@
+<mat-card class="crew-card">
+    <mat-card-header>
+      <mat-card-title>{{ crewMember?.firstName ?? 'N/A' }} {{ crewMember?.lastName ?? 'N/A' }}</mat-card-title>
+      <mat-card-subtitle>{{ crewMember?.title ?? 'N/A' }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>Nationality:</strong> {{ crewMember?.nationality ?? 'N/A' }}</p>
+      <p><strong>Days On Board:</strong> {{ crewMember?.daysOnBoard ?? 'N/A' }}</p>
+      <p><strong>Daily Rate:</strong> {{ crewMember?.dailyRate ?? 'N/A' }} {{ crewMember?.currency ?? 'N/A' }}</p>
+      <p><strong>Certificates:</strong></p>
+      <ul>
+       
+        @for( cert of crewMember?.certificates; track cert){
+            <li>{{cert.name}}</li>
+        }@empty {
+            <li>No items found</li>
+            }
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  @if(!crewMember){
+    <mat-card>
+        <mat-card-content>
+          <p>No crew member found.</p>
+        </mat-card-content>
+      </mat-card>
+  }
+  
+  
